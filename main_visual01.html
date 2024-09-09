@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main visual01</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .header {
+            background: #ddd;
+        }
+
+        .header .inner {
+            height: 120px;
+        }
+
+        .main_visual {
+            position: relative;
+            /* background-color: red;
+            background-image: url(./images/logo02.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 400px 100px; */
+
+            background: url(./images/main_visual01.jpg) no-repeat center center/cover;
+            height: 800px;
+
+        }
+
+        .main_visual .slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100%;
+        }
+
+        .main_visual .slogan strong {
+            display: block;
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+
+        .main_visual .slogan p {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1>logo</h1>
+        </div>
+    </header>
+    <main id="content">
+        <section class="main_visual">
+            <h2 class="blind">main visual</h2>
+            <div class="inner slogan">
+                <strong>Lorem ipsum dolor sit.</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Repellendus delectus soluta voluptates autem
+                    nam quia dolor quis fugit.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>
