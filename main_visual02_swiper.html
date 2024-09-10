@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main visual01</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <style>
+        .main_visual {
+            position: relative;
+        }
+
+        .main_visual .main_visual_slide .itm {
+            background-color: #ddd;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 600px;
+        }
+
+        .main_visual .main_visual_slide .itm01 {
+            background-image: url(./images/main_visual01.jpg);
+        }
+
+        .main_visual .main_visual_slide .itm02 {
+            background-image: url(./images/main_visual02.jpg);
+        }
+
+        .main_visual .main_visual_slide .itm03 {
+            background-image: url(./images/main_visual03.jpg);
+        }
+
+        .main_visual .slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            max-width: 1170px;
+            width: 100%;
+
+            z-index: 1;
+        }
+    </style>
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            const MainVisual = new Swiper('.main_visual_slide', {
+                loop: true,
+            });
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1>logo</h1>
+        </div>
+    </header>
+    <main id="content">
+        <section class="main_visual">
+            <h2 class="blind">main visual</h2>
+
+            <div class="swiper main_visual_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide itm01 itm"></div>
+                    <div class="swiper-slide itm02 itm"></div>
+                    <div class="swiper-slide itm03 itm"></div>
+                </div>
+            </div>
+
+            <div class="slogan">
+                <strong>Lorem ipsum dolor sit.</strong>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+                    Totam eos magnam ex ea quo ipsum cum
+                    sint placeat.</p>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+
+</body>
+
+</html>
