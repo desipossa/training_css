@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main visual01</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <style>
+        .main_visual {
+            position: relative;
+        }
+
+        .main_visual .main_visual_slide .itm {
+            background-color: #ddd;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 600px;
+        }
+
+        .main_visual .main_visual_slide .itm01 {
+            background-image: url(./images/main_visual01.jpg);
+        }
+
+        .main_visual .main_visual_slide .itm02 {
+            background-image: url(./images/main_visual02.jpg);
+        }
+
+        .main_visual .main_visual_slide .itm03 {
+            background-image: url(./images/main_visual03.jpg);
+        }
+
+        .main_visual .slogan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            max-width: 1170px;
+            width: 100%;
+
+            z-index: 1;
+        }
+
+        .main_visual .main_visual_slide .itm02 .slogan {
+            text-align: right;
+            color: #fff;
+        }
+
+        .main_visual .slogan strong {
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .main_visual .slogan p {
+            margin-top: 16px;
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        .main_visual .arrows {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            display: flex;
+            justify-content: space-between;
+
+            max-width: 1370px;
+            width: 100%;
+        }
+
+        .main_visual .arrows svg {
+            stroke: tomato;
+            background: #333;
+            padding: 8px;
+            box-sizing: content-box;
+            border-radius: 50%;
+        }
+
+        .main_visual .dots {
+            position: absolute;
+            left: 50%;
+            bottom: 80px;
+            transform: translate(-50%, 0);
+            z-index: 2;
+
+            width: auto;
+        }
+
+        .main_visual .dots span {
+            width: 16px;
+            height: 16px;
+            background: tomato;
+        }
+    </style>
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            const MainVisual = new Swiper('.main_visual_slide', {
+                loop: true,
+                navigation: {
+                    nextEl: '.main_visual .arrows .right',
+                    prevEl: '.main_visual .arrows .left',
+                },
+
+                pagination: {
+                    el: '.main_visual .dots',
+                    clickable: true,
+                },
+            });
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1>logo</h1>
+        </div>
+    </header>
+    <main id="content">
+        <section class="main_visual">
+            <h2 class="blind">main visual</h2>
+
+            <div class="swiper main_visual_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide itm01 itm">
+                        <div class="slogan">
+                            <strong>01 Lorem ipsum dolor sit.</strong>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+                                Totam eos magnam ex ea quo ipsum cum
+                                sint placeat.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide itm02 itm">
+                        <div class="slogan">
+                            <strong>02 Lorem ipsum dolor sit.</strong>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+                                Totam eos magnam ex ea quo ipsum cum
+                                sint placeat.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide itm03 itm">
+                        <div class="slogan">
+                            <strong>03 Lorem ipsum dolor sit.</strong>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+                                Totam eos magnam ex ea quo ipsum cum
+                                sint placeat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="arrows">
+                <button class="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-arrow-left">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <button class="right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="dots"></div>
+
+
+
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+
+</body>
+
+</html>
