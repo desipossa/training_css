@@ -44,6 +44,55 @@
 
             z-index: 1;
         }
+
+        .main_visual .slogan strong {
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .main_visual .slogan p {
+            margin-top: 16px;
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        .main_visual .arrows {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            display: flex;
+            justify-content: space-between;
+
+            max-width: 1370px;
+            width: 100%;
+        }
+
+        .main_visual .arrows svg {
+            stroke: tomato;
+            background: #333;
+            padding: 8px;
+            box-sizing: content-box;
+            border-radius: 50%;
+        }
+
+        .main_visual .dots {
+            position: absolute;
+            left: 50%;
+            bottom: 80px;
+            transform: translate(-50%, 0);
+            z-index: 2;
+
+            width: auto;
+        }
+
+        .main_visual .dots span {
+            width: 16px;
+            height: 16px;
+            background: tomato;
+        }
     </style>
 
     <script src="./js/jquery-1.12.4.min.js"></script>
@@ -53,6 +102,15 @@
         $(function () {
             const MainVisual = new Swiper('.main_visual_slide', {
                 loop: true,
+                navigation: {
+                    nextEl: '.main_visual .arrows .right',
+                    prevEl: '.main_visual .arrows .left',
+                },
+
+                pagination: {
+                    el: '.main_visual .dots',
+                    clickable: true,
+                },
             });
         })
 
@@ -77,6 +135,28 @@
                     <div class="swiper-slide itm03 itm"></div>
                 </div>
             </div>
+
+
+            <div class="arrows">
+                <button class="left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-arrow-left">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <button class="right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="dots"></div>
 
             <div class="slogan">
                 <strong>Lorem ipsum dolor sit.</strong>
