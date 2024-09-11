@@ -42,6 +42,95 @@
         .main_content {
             background: #f9f9f9;
         }
+
+        .main_content .inner {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main_content .inner .itm {
+            flex: 1;
+
+            position: relative;
+        }
+
+        .main_content .inner .itm a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            padding: 16px 40px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            border-radius: 24px;
+
+
+        }
+
+        .main_solution {
+            background: linear-gradient(transparent 50%, #005456 50%);
+        }
+
+        .main_solution .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .main_solution .title .list {
+            display: flex;
+            gap: 40px;
+        }
+
+        .main_solution .title .list button {
+            font-size: 18px;
+        }
+
+        .main_solution .title h2 {
+            text-align: left;
+        }
+
+        .main_solution .inner {
+            display: flex;
+            gap: 30px;
+
+        }
+
+        .main_solution .inner .itm {
+            flex: 1;
+        }
+
+        .main_solution .inner .itm .desc {
+            background: #fff;
+            padding: 32px 24px;
+        }
+
+        .main_solution .inner .itm .desc strong {
+            display: block;
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .main_solution .inner .itm .desc p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+            min-height: 72px;
+
+            word-break: keep-all;
+        }
+
+        .main_solution .inner .itm .desc span {
+            font-size: 24px;
+            font-weight: 300;
+        }
     </style>
 
     <script src="./js/jquery-1.12.4.min.js"></script>
@@ -84,16 +173,62 @@
             </div>
         </section>
         <section class="main_content default">
-            <div class="title">
-                <h2>Events</h2>
-                <p>고객님을 위한 스페셜한 이벤트를 통해 즐거운 행운과 경품을 만나보세요.</p>
-            </div>
+            <h2 class="blind">content</h2>
             <div class="inner">
                 <div class="itm">
                     <figure>
-                        <img src="" alt="">
+                        <img src="./images/main_content_itm01.jpg" alt="">
                     </figure>
+                    <a href="">견적내기</a>
                 </div>
+                <div class="itm">
+                    <figure>
+                        <img src="./images/main_content_itm02.jpg" alt="">
+                    </figure>
+                    <a href="">매장찾기</a>
+                </div>
+            </div>
+        </section>
+        <section class="main_solution default">
+            <div class="title">
+                <h2>분양안내</h2>
+                <ul class="list">
+                    <li><button>신규분양</button></li>
+                    <li><button>추천분양</button></li>
+                    <li><button>상가분양</button></li>
+                </ul>
+            </div>
+            <div class="inner">
+                <a href="" class="itm">
+                    <figure>
+                        <img src="./images/main_event_itm01.jpg" alt="">
+                    </figure>
+                    <div class="desc">
+                        <strong>라체러보 푸르지오 써밋</strong>
+                        <p>서울특별시 성동구 행당동 128번지 일대 총 958세대 (일반분양 138세대)</p>
+                        <span>02-555-1281</span>
+                    </div>
+                </a>
+                <a href="" class="itm">
+                    <figure>
+                        <img src="./images/main_event_itm02.jpg" alt="">
+                    </figure>
+                    <div class="desc">
+                        <strong>라체러보 푸르지오 써밋</strong>
+                        <p>서울특별시 성동구 행당동 128번지</p>
+                        <span>02-555-1281</span>
+                    </div>
+                </a>
+                <a href="" class="itm">
+                    <figure>
+                        <img src="./images/main_event_itm03.jpg" alt="">
+                    </figure>
+                    <div class="desc">
+                        <strong>라체러보 푸르지오 써밋</strong>
+                        <p>서울특별시 성동구 행당동 128번지 일대 총 958세대 (일반분양 138세대)</p>
+                        <span>02-555-1281</span>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
