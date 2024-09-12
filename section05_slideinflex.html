@@ -26,11 +26,20 @@
             background: tan;
 
             flex: 7;
+
+            /* overflow: hidden; */
+            min-width: 0;
         }
     </style>
 
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            const testSlide = new Swiper('.test_slide')
+        })
+    </script>
 </head>
 
 <body>
@@ -43,7 +52,24 @@
             </div>
             <div class="inner">
                 <div class="left">a</div>
-                <div class="right">b</div>
+                <div class="right">
+                    <div class="swiper test_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/main_visual01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/main_visual02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/main_visual01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/main_visual02.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
